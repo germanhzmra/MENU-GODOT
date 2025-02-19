@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://cml03e6aaamrs"]
+
+[ext_resource type="Script" path="res://instrucciones.gd" id="1_gujom"]
+
+[node name="instrucciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gujom")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.490116, 0.74244, 0.584053, 1)
+
+[node name="salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 301.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 30
+text = "salir"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -445.5
+offset_top = -172.0
+offset_right = 445.5
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "ya pondre instrucciones con mi juego "
+
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

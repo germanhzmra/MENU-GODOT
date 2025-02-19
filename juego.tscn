@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7saxejmb1cg7"]
+
+[ext_resource type="Script" path="res://juego.gd" id="1_t01cf"]
+
+[node name="juego" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t01cf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.576471, 0.72549, 0.72549, 1)
+
+[node name="salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 16.0
+offset_right = 338.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 30
+text = "salir 
+"
+
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]
